@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Caveat, Quicksand } from "next/font/google";
+import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
+import { WhatsAppFab } from "@/components/WhatsAppFab";
 import "./globals.css";
 
 const caveat = Caveat({
@@ -30,7 +33,12 @@ export default function RootLayout({
       lang="pt-BR"
       className={`${caveat.variable} ${quicksand.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <Navbar />
+        <main className="flex-1 pt-16 lg:pt-24">{children}</main>
+        <Footer />
+        <WhatsAppFab />
+      </body>
     </html>
   );
 }

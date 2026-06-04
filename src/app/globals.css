@@ -109,3 +109,26 @@
     @apply font-sans;
   }
 }
+
+/* WhatsApp FAB pulse — subtle every 5s, respects reduced motion */
+@keyframes fab-pulse {
+  0%, 85%, 100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+  }
+  90% {
+    box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+  }
+  95% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+.animate-fab-pulse {
+  animation: fab-pulse 5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fab-pulse {
+    animation: none;
+  }
+}
