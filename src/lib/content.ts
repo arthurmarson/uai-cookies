@@ -33,6 +33,10 @@ export function getSiteInfo(): SiteInfo {
   return siteInfo;
 }
 
+export function getLogoSrc(): string {
+  return siteInfo.logoSrc;
+}
+
 export function getWhatsAppUrl(message?: string): string {
   const base = `https://wa.me/${siteInfo.whatsapp}`;
   if (message) {

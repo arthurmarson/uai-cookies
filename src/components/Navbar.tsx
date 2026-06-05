@@ -6,7 +6,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu } from "lucide-react";
 import { MobileMenu } from "./MobileMenu";
-import { getWhatsAppUrl } from "@/lib/content";
+import { getWhatsAppUrl, getLogoSrc } from "@/lib/content";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -19,6 +19,7 @@ export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
   const whatsappUrl = getWhatsAppUrl();
+  const logoSrc = getLogoSrc();
 
   return (
     <>
@@ -27,11 +28,11 @@ export function Navbar() {
           {/* Logo */}
           <Link href="/" className="shrink-0">
             <Image
-              src="/images/logo.jpeg"
+              src={logoSrc}
               alt="Uai Cookies"
-              width={40}
-              height={40}
-              className="h-10 w-auto rounded-full"
+              width={56}
+              height={56}
+              className="h-10 w-10 lg:h-14 lg:w-14 rounded-full"
               priority
             />
           </Link>

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { getSiteInfo } from "@/lib/content";
+import { getSiteInfo, getLogoSrc } from "@/lib/content";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -19,11 +19,11 @@ export function Footer() {
           {/* Col 1 — Logo + frase */}
           <div className="flex flex-col items-center gap-3 lg:items-start">
             <Image
-              src="/images/logo.jpeg"
+              src={getLogoSrc()}
               alt="Uai Cookies"
-              width={48}
-              height={48}
-              className="h-12 w-auto rounded-full"
+              width={64}
+              height={64}
+              className="h-12 w-12 lg:h-16 lg:w-16 rounded-full"
             />
             <p className="font-display text-xl text-creme/90">
               Feito com carinho, lá de Minas
