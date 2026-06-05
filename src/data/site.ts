@@ -1,4 +1,5 @@
 export interface SiteInfo {
+  logoSrc: string;
   whatsapp: string;
   whatsappDisplay: string;
   instagram: string;
@@ -10,6 +11,7 @@ export interface SiteInfo {
 }
 
 export const siteInfo: SiteInfo = {
+  logoSrc: "/images/logo.png",
   whatsapp: "5534999999999", // TODO: dado real
   whatsappDisplay: "(34) 99999-9999", // TODO: dado real
   instagram: "@uaicookies", // TODO: dado real
