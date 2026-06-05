@@ -73,15 +73,22 @@ export function MobileMenu({
       </button>
 
       <nav className="flex flex-col items-center gap-8">
-        {navLinks.map((link) => (
+        {navLinks.map((link, i) => (
           <Link
             key={link.href}
             href={link.href}
             onClick={onClose}
             tabIndex={isOpen ? 0 : -1}
-            className={`text-2xl font-semibold transition-colors hover:text-caramelo ${
+            className={`text-2xl font-semibold transition-all duration-300 ease-out hover:text-caramelo motion-reduce:transition-none ${
               currentPath === link.href ? "text-caramelo" : "text-creme"
+            } ${
+              isOpen
+                ? "translate-y-0 opacity-100"
+                : "translate-y-4 opacity-0"
             }`}
+            style={{
+              transitionDelay: isOpen ? `${100 + i * 60}ms` : "0ms",
+            }}
           >
             {link.label}
           </Link>
@@ -93,7 +100,14 @@ export function MobileMenu({
           rel="noopener noreferrer"
           onClick={onClose}
           tabIndex={isOpen ? 0 : -1}
-          className="mt-4 inline-flex items-center gap-3 rounded-xl bg-whatsapp px-6 py-3 text-lg font-semibold text-white transition-colors hover:bg-whatsapp/90"
+          className={`mt-4 inline-flex items-center gap-3 rounded-xl bg-whatsapp px-6 py-3 text-lg font-semibold text-white transition-all duration-300 ease-out hover:bg-whatsapp/90 motion-reduce:transition-none ${
+            isOpen
+              ? "translate-y-0 opacity-100"
+              : "translate-y-4 opacity-0"
+          }`}
+          style={{
+            transitionDelay: isOpen ? `${100 + navLinks.length * 60}ms` : "0ms",
+          }}
         >
           <svg
             viewBox="0 0 24 24"
