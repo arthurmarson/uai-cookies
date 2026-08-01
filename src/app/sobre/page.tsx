@@ -62,7 +62,7 @@ export default function Sobre() {
             </div>
 
             <div>
-              <span className="font-display text-2xl text-caramelo lg:text-3xl">
+              <span className="font-display text-3xl font-bold text-caramelo lg:text-4xl">
                 De Uberlândia, com amor
               </span>
 
@@ -104,7 +104,7 @@ export default function Sobre() {
       <FadeInSection>
         <section className="py-16 lg:py-24">
           <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
-            <blockquote className="font-display text-2xl text-marrom lg:text-4xl">
+            <blockquote className="text-balance font-display text-3xl font-bold text-marrom lg:text-5xl">
               &ldquo;Cada cookie é feito à mão, com ingredientes selecionados e
               muito carinho mineiro.&rdquo;
             </blockquote>
@@ -146,7 +146,7 @@ export default function Sobre() {
               </a>
             </div>
 
-            <p className="mt-4 font-display text-lg text-texto-soft">
+            <p className="mt-4 font-display text-xl font-bold text-marrom">
               Respondemos rápido!
             </p>
           </div>

@@ -33,7 +33,7 @@ export function ComboCard({ combo }: ComboCardProps) {
         </ul>
 
         {/* Preco */}
-        <p className="mt-4 font-display text-2xl font-bold text-caramelo">
+        <p className="mt-4 font-sans text-2xl font-bold tabular-nums text-caramelo">
           {formatPrice(combo.price)}
         </p>
       </div>

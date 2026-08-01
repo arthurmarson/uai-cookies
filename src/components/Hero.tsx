@@ -19,24 +19,25 @@ export function Hero() {
         className="object-cover"
       />
 
-      {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-[#3D2A10]/70 via-[#3D2A10]/30 to-transparent" />
+      {/* Scrim — concentra o escurecimento onde o texto vive */}
+      <div className="photo-scrim absolute inset-0" />
 
       {/* Content */}
       <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center">
-        <h1 className="max-w-2xl font-display text-3xl text-white lg:text-5xl">
+
+        <h1 className="text-on-photo mt-4 max-w-3xl text-balance font-sans text-4xl font-bold leading-[1.1] tracking-tight text-branco sm:text-5xl lg:text-6xl">
           Cookies artesanais recheados, feitos com carinho em Minas
         </h1>
 
-        <p className="mt-4 max-w-xl text-base text-white/80 lg:text-lg">
+        <p className="text-on-photo mt-5 max-w-xl text-balance text-base text-creme/95 lg:text-lg">
           Receita própria, ingredientes selecionados, entrega em Uberlândia
         </p>
 
         {/* CTAs */}
-        <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+        <div className="mt-9 flex flex-col gap-4 sm:flex-row">
           <Link
             href="/cardapio"
-            className="rounded-full border-2 border-white px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+            className="rounded-full border-2 border-branco bg-marrom-dark/25 px-6 py-3 text-sm font-semibold text-branco backdrop-blur-sm transition-colors hover:bg-branco hover:text-marrom-dark"
           >
             Conheça nosso cardápio
           </Link>

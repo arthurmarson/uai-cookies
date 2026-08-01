@@ -20,7 +20,7 @@ export function CookieCard({ cookie }: CookieCardProps) {
         <p className="mt-1 line-clamp-1 text-sm text-texto-soft">
           {cookie.description}
         </p>
-        <p className="mt-2 font-display text-xl font-bold text-caramelo">
+        <p className="mt-2 font-sans text-xl font-bold tabular-nums text-caramelo">
           {formatPrice(cookie.price)}
         </p>
       </div>

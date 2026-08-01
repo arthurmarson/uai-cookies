@@ -23,7 +23,7 @@ export function AboutPreview() {
 
         {/* Texto */}
         <div>
-          <span className="font-display text-2xl text-caramelo lg:text-3xl">
+          <span className="font-display text-3xl font-bold text-caramelo lg:text-4xl">
             De Uberlândia, com amor
           </span>
 

@@ -1,6 +1,6 @@
 export interface SiteInfo {
   logoSrc: string;
-  whatsapp: string;
+  whatsappUrl: string;
   whatsappDisplay: string;
   instagram: string;
   instagramUrl: string;
@@ -12,10 +12,12 @@ export interface SiteInfo {
 
 export const siteInfo: SiteInfo = {
   logoSrc: "/images/logo.png",
-  whatsapp: "5534999999999", // TODO: dado real
-  whatsappDisplay: "(34) 99999-9999", // TODO: dado real
-  instagram: "@uaicookies", // TODO: dado real
-  instagramUrl: "https://instagram.com/uaicookies", // TODO: dado real
+  // Link oficial de contato — o mesmo divulgado no Instagram da Uai Cookies
+  whatsappUrl:
+    "https://api.whatsapp.com/message/P6JER47EO4DLA1?autoload=1&app_absent=0&utm_source=ig",
+  whatsappDisplay: "O mesmo contato do Instagram",
+  instagram: "@uaicookies_",
+  instagramUrl: "https://www.instagram.com/uaicookies_/",
   city: "Uberlândia - MG",
   deliveryArea: "Uberlândia e região", // TODO: dado real
   hours: "Segunda a sábado, das 9h às 18h", // TODO: dado real

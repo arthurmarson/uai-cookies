@@ -20,7 +20,7 @@ export function PageHeader({ title, subtitle, backgroundImage }: PageHeaderProps
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-marrom-dark/60" />
+          <div className="photo-scrim absolute inset-0" />
         </>
       ) : (
         <div className="absolute inset-0 bg-creme-dark" />
@@ -29,16 +29,16 @@ export function PageHeader({ title, subtitle, backgroundImage }: PageHeaderProps
       {/* Content */}
       <div className="relative mx-auto max-w-4xl px-4 pt-32 pb-16 text-center sm:px-6 lg:pt-40 lg:pb-20">
         <h1
-          className={`font-sans text-3xl font-bold lg:text-4xl ${
-            backgroundImage ? "text-branco" : "text-marrom"
+          className={`text-balance font-sans text-3xl font-bold tracking-tight lg:text-5xl ${
+            backgroundImage ? "text-on-photo text-branco" : "text-marrom"
           }`}
         >
           {title}
         </h1>
         {subtitle && (
           <p
-            className={`mt-3 text-lg ${
-              backgroundImage ? "text-branco/80" : "text-texto-soft"
+            className={`mt-3 text-balance text-lg ${
+              backgroundImage ? "text-on-photo text-creme/95" : "text-texto-soft"
             }`}
           >
             {subtitle}

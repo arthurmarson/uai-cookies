@@ -37,12 +37,12 @@ export function getLogoSrc(): string {
   return siteInfo.logoSrc;
 }
 
-export function getWhatsAppUrl(message?: string): string {
-  const base = `https://wa.me/${siteInfo.whatsapp}`;
-  if (message) {
-    return `${base}?text=${encodeURIComponent(message)}`;
-  }
-  return base;
+// Usamos o link curto oficial (api.whatsapp.com/message/<codigo>), o mesmo do
+// Instagram. Esse formato nao aceita texto pre-preenchido via `?text=`, entao o
+// parametro `message` fica aceito por compatibilidade, mas e ignorado.
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export function getWhatsAppUrl(_message?: string): string {
+  return siteInfo.whatsappUrl;
 }
 
 export function getFaq(): FaqItem[] {

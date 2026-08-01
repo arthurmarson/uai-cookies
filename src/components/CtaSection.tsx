@@ -45,7 +45,7 @@ export function CtaSection({
           </a>
         </div>
 
-        <p className="mt-4 font-display text-lg text-texto-soft">
+        <p className="mt-4 font-display text-xl font-bold text-marrom">
           Respondemos rápido!
         </p>
       </div>
