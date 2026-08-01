@@ -40,7 +40,10 @@ export function HowItWorks() {
           {steps.map((step) => (
             <div key={step.number} className="text-center">
               {/* Numero discreto */}
-              <span className="font-display text-4xl text-caramelo/50" aria-hidden="true">
+              <span
+                className="font-sans text-3xl font-bold tabular-nums text-caramelo/70"
+                aria-hidden="true"
+              >
                 {step.number}
               </span>
 

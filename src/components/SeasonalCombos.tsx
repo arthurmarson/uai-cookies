@@ -21,7 +21,7 @@ export function SeasonalCombos() {
               <div className="px-6 py-10 sm:px-10 lg:px-16 lg:py-14">
                 {/* Badge sazonal */}
                 {combo.seasonLabel && (
-                  <span className="inline-block font-display text-lg text-creme-dark">
+                  <span className="inline-block font-display text-xl font-bold text-creme-dark">
                     {combo.seasonLabel}
                   </span>
                 )}
@@ -45,7 +45,7 @@ export function SeasonalCombos() {
 
                 {/* Preco + CTA */}
                 <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
-                  <span className="font-display text-3xl font-bold text-creme-dark">
+                  <span className="font-sans text-3xl font-bold tabular-nums text-creme-dark">
                     {formatPrice(combo.price)}
                   </span>
 

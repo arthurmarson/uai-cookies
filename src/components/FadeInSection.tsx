@@ -20,15 +20,6 @@ export function FadeInSection({
     const el = ref.current;
     if (!el) return;
 
-    const prefersReduced = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
-
-    if (prefersReduced) {
-      setIsVisible(true);
-      return;
-    }
-
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -46,12 +37,9 @@ export function FadeInSection({
   return (
     <div
       ref={ref}
-      className={className}
-      style={{
-        opacity: isVisible ? 1 : 0,
-        transform: isVisible ? "translateY(0)" : "translateY(1rem)",
-        transition: `opacity 500ms ease-out ${delay}ms, transform 500ms ease-out ${delay}ms`,
-      }}
+      data-visible={isVisible}
+      className={`fade-in-section ${className}`}
+      style={{ "--fade-delay": `${delay}ms` } as React.CSSProperties}
     >
       {children}
     </div>
